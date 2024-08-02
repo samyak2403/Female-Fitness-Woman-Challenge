@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imgbtnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_16dp"
+            android:src="@drawable/ic_dialog_close"
+            app:tint="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/dl_exercise_quite_title"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_20sp" />
+
+        <Button
+            android:id="@+id/btnQuite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_64dp"
+            android:layout_marginTop="@dimen/_64dp"
+            android:layout_marginEnd="@dimen/_64dp"
+            android:background="@drawable/round_corner_theme"
+            android:padding="@dimen/_16dp"
+            android:text="@string/btn_quit"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_64dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_64dp"
+            android:background="@drawable/round_corner_white_trans"
+            android:padding="@dimen/_16dp"
+            android:text="@string/btn_continue"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/tvComebackMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="@drawable/bottom_line_white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/dl_come_back_in_30_minutes"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_14sp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'HorizontalPicker'
+    bintrayName = 'HorizontalPicker'
+
+    publishedGroupId = 'com.github.jhonnyx2012'
+    libraryName = 'HorizontalPicker'
+    artifact = 'horizontal-picker'
+
+    libraryDescription = 'Horizontal datepicker with smooth selection by day'
+
+    siteUrl = 'https://github.com/jhonnyx2012/HorizontalPicker'
+    gitUrl = 'https://github.com/jhonnyx2012/HorizontalPicker.git'
+
+    libraryVersion = '1.0.6'
+
+    developerId = 'jhonnyx2012'
+    developerName = 'Jhonny Barrios'
+    developerEmail = 'jhonnyx2012@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.6"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:recyclerview-v7:25.1.1'
+//    compile 'com.android.support:recyclerview-v7:25.1.1'
+//    compile 'joda-time:joda-time:2.9.7'
+//    implementation 'joda-time:joda-time:2.9.7'
+    implementation 'net.danlew:android.joda:2.10.9.1'
+//    compile 'joda-time:joda-time:2.12.7'
+
+}

@@ -1,0 +1,2 @@
+include ':app', ':utillity', ':MPChartLib', ':horizontal-picker'
+rootProject.name='Female Fitness - Woman Challenge'

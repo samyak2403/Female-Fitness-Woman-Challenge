@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.MainActivity">
+
+    <!-- Todo Title -->
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/title_background">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/tv_action_bar_title"
+            android:layout_marginStart="13dp"
+            android:text="@string/app_name" />
+
+    </RelativeLayout>
+
+    <!-- Todo Here Load Fragment -->
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottomMenu"
+        android:layout_below="@+id/rlTitle"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottomMenu"
+        android:layout_below="@+id/rlTitle" />
+
+    <!-- Todo Bottom menu -->
+    <LinearLayout
+        android:id="@+id/llBottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_menu"
+        android:baselineAligned="false"
+        android:elevation="@dimen/_4dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4dp"
+        android:weightSum="4">
+
+        <!-- Training Plan -->
+        <LinearLayout
+            android:id="@+id/llMyTrainingPlan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMyTrainingPlan"
+                style="@style/iv_bottom_menu_icon"
+                android:onClick="onClick"
+                android:src="@drawable/ic_tab_training"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMyTrainingPlan"
+                style="@style/tv_bottom_menu_text"
+                android:onClick="onClick"
+                android:text="@string/my_training_plan"
+                android:textColor="@color/colorBlack"/>
+
+        </LinearLayout>
+
+        <!-- Routines -->
+        <LinearLayout
+            android:id="@+id/llRoutines"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivRoutines"
+                style="@style/iv_bottom_menu_icon"
+                android:onClick="onClick"
+                android:src="@drawable/ic_tab_routines"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRoutines"
+                style="@style/tv_bottom_menu_text"
+                android:onClick="onClick"
+                android:text="@string/routines" />
+
+        </LinearLayout>
+
+        <!-- Reports -->
+        <LinearLayout
+            android:id="@+id/llReports"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivReports"
+                style="@style/iv_bottom_menu_icon"
+                android:onClick="onClick"
+                android:src="@drawable/ic_tab_report" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReports"
+                style="@style/tv_bottom_menu_text"
+                android:onClick="onClick"
+                android:text="@string/report" />
+
+        </LinearLayout>
+
+        <!-- Mines -->
+        <LinearLayout
+            android:id="@+id/llMines"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMines"
+                style="@style/iv_bottom_menu_icon"
+                android:onClick="onClick"
+                android:src="@drawable/ic_tab_mine" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMines"
+                style="@style/tv_bottom_menu_text"
+                android:onClick="onClick"
+                android:text="@string/mine" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

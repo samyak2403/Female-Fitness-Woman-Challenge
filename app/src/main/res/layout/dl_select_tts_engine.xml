@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:textStyle="bold"
+        android:text="@string/please_choose_guide_voice_engine"
+        android:textSize="@dimen/_20sp" />
+
+    <RadioButton
+        android:id="@+id/rdoGoogleEngine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:paddingStart="@dimen/_16dp"
+        android:text="@string/google_text_to_speech_engine"
+        android:textSize="@dimen/_18sp" />
+
+</LinearLayout>

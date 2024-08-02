@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_8dp"
+    android:paddingTop="@dimen/_8dp"
+    android:paddingEnd="@dimen/_8dp">
+
+    <!-- Todo Category Title Layout-->
+    <RelativeLayout
+        android:id="@+id/rltWorkOutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtWorkoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:gravity="bottom"
+            android:paddingTop="@dimen/_8dp"
+            android:text="@string/demo_text"
+            android:textSize="@dimen/_18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- Todo All Category Details -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/RltWorkOutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/radius_category_card_view"
+        app:cardElevation="@dimen/_0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_workout_row_img_height">
+
+            <ImageView
+                android:id="@+id/imgWorkoutRow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_workout_row_img_height"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@color/colorTheme" />
+
+            <!--
+            android:layout_above="@+id/txtWorkoutDetails"
+            -->
+            <TextView
+                android:id="@+id/txtWorkoutCategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_0dp"
+                android:padding="@dimen/_2dp"
+                android:textAllCaps="true"
+                android:text="@string/demo_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWorkoutDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtWorkoutCategoryTitle"
+                android:layout_alignParentBottom="false"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:padding="@dimen/_2dp"
+                android:text="@string/demo_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14sp" />
+
+            <ImageView
+                android:id="@+id/imgWorkoutDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_beginner_level" />
+
+            <!-- Progress bar -->
+            <RelativeLayout
+                android:id="@+id/rltProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_8dp">
+
+                <!-- Day process in text-->
+                <RelativeLayout
+                    android:id="@+id/rltDayStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4dp">
+
+                    <TextView
+                        android:id="@+id/txtDayLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28 Days Left"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_14sp" />
+
+                    <TextView
+                        android:id="@+id/txtDayPer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="0%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_14sp" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/pbDay"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8dp"
+                    android:layout_below="@+id/rltDayStatus"
+                    android:max="100"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:progressDrawable="@drawable/pb_gray_theme" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

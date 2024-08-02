@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>bannerAdId</key>
+    <value>ca-app-pub-3940256099942544/6300978111</value>
+  </entry>
+  <entry>
+    <key>nativeAdId</key>
+    <value>ca-app-pub-3940256099942544/2247696110</value>
+  </entry>
+  <entry>
+    <key>interstitialAdId</key>
+    <value>ca-app-pub-3940256099942544/1033173712</value>
+  </entry>
+  <entry>
+    <key>Adshow</key>
+    <value>true</value>
+  </entry>
+</defaults>

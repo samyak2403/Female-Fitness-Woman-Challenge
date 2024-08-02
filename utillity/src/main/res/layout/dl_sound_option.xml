@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_16dp"
+    android:paddingTop="@dimen/_16dp"
+    android:paddingEnd="@dimen/_16dp"
+    android:paddingBottom="@dimen/_8dp">
+
+    <!-- Todo Title -->
+    <TextView
+        android:id="@+id/txt_dl_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:text="@string/sound_options"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold" />
+
+    <!-- Todo Mute -->
+    <RelativeLayout
+        android:id="@+id/rlMute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:padding="@dimen/_8dp">
+
+        <ImageView
+            android:id="@+id/imgMute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_sound_options"
+            android:tint="@color/colorTheme" />
+
+        <TextView
+            style="@style/dialog_sound_option_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgMute"
+            android:text="@string/mute" />
+
+        <Switch
+            android:id="@+id/swtMute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+    <!-- Todo Voice Guide -->
+    <RelativeLayout
+        android:id="@+id/rlVoiceGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp"
+        android:padding="@dimen/_8dp">
+
+        <ImageView
+            android:id="@+id/imgVoiceGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_setting_voice_guide"
+            android:tint="@color/colorTheme" />
+
+        <TextView
+            style="@style/dialog_sound_option_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgVoiceGuide"
+            android:text="@string/voice_guide_txt" />
+
+        <Switch
+            android:id="@+id/swtVoiceGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:checked="true" />
+
+    </RelativeLayout>
+
+    <!-- Todo Coach tips -->
+    <RelativeLayout
+        android:id="@+id/rlCoachTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp"
+        android:padding="@dimen/_8dp">
+
+        <ImageView
+            android:id="@+id/imgCoachTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_setting_coach_tips"
+            android:tint="@color/colorTheme" />
+
+        <TextView
+            style="@style/dialog_sound_option_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgCoachTips"
+            android:text="@string/coach_tips_txt" />
+
+        <Switch
+            android:id="@+id/swtCoachTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:checked="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_16dp"
+        android:padding="@dimen/_16dp"
+        android:text="@string/btn_ok"
+        android:textStyle="normal"
+        android:textSize="@dimen/_16dp"
+        android:textColor="@color/colorTheme" />
+
+</LinearLayout>

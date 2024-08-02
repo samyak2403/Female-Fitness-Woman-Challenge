@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Todo Toolbar -->
+    <color name="colorToolbarText">#ffffff</color>
+    <color name="colorToolbarBg">#ff7091</color>
+    <color name="colorHistoryImgBg">#464646</color>
+
+    <!-- Todo Common colors -->
+    <color name="colorTheme">#94aafd</color>
+    <color name="light_transparent">#80FF7091</color>
+    <color name="colorGray">#aeaeae</color>
+    <color name="colorGray_">#DDDDDD</color>
+    <color name="colorGrayLight">#EFF3F4</color>
+<!--    <color name="colorGrayLight">#ebf0f2</color>-->
+    <color name="colorGrayDark">#a1a1a1</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteTran">#8BFFFFFF</color>
+    <color name="colorBlack">#1a222d</color>
+    <color name="colorBlackTrans">#87000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_">#66050505</color>
+
+    <!-- Todo Bg Colors -->
+    <color name="colorBgGray">#A1DAD9D9</color>
+    <color name="colorBgWhite">#FFFFFF</color>
+    <color name="colorBgBlack">#1a222d</color>
+    <color name="colorBgBlueLight">#232d3a</color>
+
+
+    <!-- Todo Drawer -->
+    <color name="colorDrawerText">#000000</color>
+    <color name="colorDrawerBg">#ff7091</color>
+
+
+    <!-- Todo Level colors  -->
+    <color name="colorBeginner">#ff9a02</color>
+    <color name="colorIntermediate">#359aff</color>
+    <color name="colorAdvance">#ff3535</color>
+
+
+    <!-- Todo BMI Chart Background -->
+    <color name="colorFirst">#91CEC0</color>
+    <color name="colorSecond">#154C83</color>
+    <color name="colorThird">#1DC974</color>
+    <color name="colorFour">#CCC504</color>
+    <color name="colorFive">#E09C55</color>
+    <color name="colorSix">#CF2E2E</color>
+
+
+</resources>

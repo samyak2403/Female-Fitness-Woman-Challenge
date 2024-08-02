@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/_4dp">
+
+    <TextView
+        android:id="@+id/txtDayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/_14sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgIsWorkoutDay"
+        android:layout_width="@dimen/report_week_round_hw"
+        android:layout_height="@dimen/report_week_round_hw"
+        android:layout_marginTop="@dimen/_12dp"
+        android:src="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/txtDayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4dp"
+        android:text="11"
+        android:textSize="@dimen/_14sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.HistoryActivity">
+
+    <!-- Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorTheme">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_toEndOf="@+id/imgBack"
+            android:text="@string/history"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <!-- Todo calendar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:divider="@drawable/horizontal_divider"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_8dp"
+                android:paddingEnd="@dimen/_8dp"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_4dp">
+
+                    <ImageButton
+                        android:id="@+id/imgbtnMonthPrev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/_8dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_history_cal_next" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMonthYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorTheme" />
+
+                    <ImageButton
+                        android:id="@+id/imgbtnMonthNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/_8dp"
+                        android:src="@drawable/ic_history_cal_next" />
+                </LinearLayout>
+
+                <com.utillity.compactcalender.CompactCalendarView
+                    android:id="@+id/CompatCalenderView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/calender_height"
+                    app:compactCalendarBackgroundColor="@color/colorWhite"
+                    app:compactCalendarCurrentDayBackgroundColor="@color/colorTheme"
+                    app:compactCalendarCurrentDayIndicatorStyle="no_fill_large_indicator"
+                    app:compactCalendarCurrentDayTextColor="@color/colorWhite"
+                    app:compactCalendarCurrentSelectedDayBackgroundColor="@color/colorTheme"
+                    app:compactCalendarCurrentSelectedDayTextColor="@color/colorBlack"
+                    app:compactCalendarDisplayOtherMonthDays="true"
+                    app:compactCalendarEventIndicatorStyle="fill_large_indicator"
+                    app:compactCalendarOtherMonthDaysTextColor="@color/colorWhite"
+                    app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="false"
+                    app:compactCalendarTargetHeight="@dimen/calender_height"
+                    app:compactCalendarTextColor="@color/colorBlack"
+                    app:compactCalendarTextSize="@dimen/_12sp" />
+
+            </LinearLayout>
+
+            <!-- AdView Code -->
+            <LinearLayout
+                android:id="@+id/lny_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:visibility="gone"
+                    ads:adSize="BANNER"
+                     />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/llAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_8dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/llAdViewFacebook"
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical" />
+
+
+            <!-- Todo history list -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcyHistoryList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:reverseLayout="true" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

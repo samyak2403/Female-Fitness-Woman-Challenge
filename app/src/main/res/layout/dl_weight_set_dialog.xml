@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_8dp">
+
+    <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+        android:id="@+id/dtpWeightSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorGray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edKG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toStartOf="@+id/txtUnit"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionDone"
+            android:maxLength="5"
+            android:textSize="@dimen/_22sp" />
+
+        <TextView
+            android:id="@+id/txtUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_kg"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@drawable/ract_theme_select"
+            android:padding="@dimen/_8dp"
+            android:layout_toStartOf="@+id/txtLB"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sp" />
+
+        <TextView
+            android:id="@+id/txtLB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@drawable/ract_gray"
+            android:padding="@dimen/_8dp"
+            android:text="@string/lbl_lb"
+            android:textSize="@dimen/_18sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_0dp">
+
+        <Button
+            android:id="@+id/btnChooseUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_4dp"
+            android:text="Choose Unit"
+            android:visibility="gone"
+            android:textColor="@color/colorTheme" />
+
+        <Button
+            android:id="@+id/btnOkay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnSave"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_0dp"
+            android:text="@string/btn_cancel"
+            android:textColor="@color/colorTheme" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_4dp"
+            android:text="@string/btn_save"
+            android:textColor="@color/colorTheme" />
+
+    </RelativeLayout>
+
+</LinearLayout>

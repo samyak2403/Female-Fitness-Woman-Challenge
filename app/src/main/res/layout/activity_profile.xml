@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileActivity">
+
+    <!-- Todo Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorTheme">
+
+        <ImageView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_16dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvBack"
+            android:text="@string/health_data"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/tv_health_data_title"
+            android:text="@string/lbl_units" />
+
+        <RadioGroup
+            android:id="@+id/rgUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/rbKgCm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:checked="true"
+                android:text="@string/lbl_kg_cm"
+                android:textSize="@dimen/_16sp" />
+
+            <RadioButton
+                android:id="@+id/rbLbFt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32dp"
+                android:text="@string/lbl_lb_ft"
+                android:textSize="@dimen/_16sp" />
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/tv_health_data_title"
+            android:text="@string/lbl_weight" />
+
+        <TextView
+            android:id="@+id/txtWeightValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:paddingTop="@dimen/_4dp"
+            android:paddingBottom="@dimen/_4dp"
+            android:text="@string/lbl_kg"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@color/colorGray" />
+
+        <TextView
+            style="@style/tv_health_data_title"
+            android:text="@string/lbl_height" />
+
+        <TextView
+            android:id="@+id/txtHeightValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:paddingTop="@dimen/_8dp"
+            android:paddingBottom="@dimen/_8dp"
+            android:text="@string/lbl_in"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorGray" />
+
+        <TextView
+            style="@style/tv_health_data_title"
+            android:text="@string/lbl_year_of_birth" />
+
+        <TextView
+            android:id="@+id/tvBirthYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:paddingTop="@dimen/_8dp"
+            android:paddingBottom="@dimen/_8dp"
+            android:text="@string/lbl_year_of_birth"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorGray" />
+
+        <TextView
+            style="@style/tv_health_data_title"
+            android:text="@string/gender" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:checked="true"
+                android:text="@string/female"
+                android:textSize="@dimen/_16sp" />
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32dp"
+                android:text="@string/male"
+                android:textSize="@dimen/_16sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

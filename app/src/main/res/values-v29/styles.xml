@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme_Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--        <item name="android:windowBackground">@drawable/splash_logo</item>-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
+        <item name="android:enforceNavigationBarContrast" tools:ignore="NewApi">false</item>
+    </style>
+</resources>

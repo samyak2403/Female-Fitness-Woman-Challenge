@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLight"
+    tools:context=".activity.ExerciseActivity">
+
+    <!-- Todo Top timer calculation -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWorkoutStatus"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <!-- Todo Exercise animation view with sliding -->
+    <com.utillity.custom.NonSwipeAbleViewPager
+        android:id="@+id/viewPagerWorkout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rltBottomControl"
+        android:layout_below="@+id/rvWorkoutStatus" />
+
+    <!-- Todo Top controls -->
+    <!--<RelativeLayout
+        android:id="@+id/rltTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/rvWorkoutStatus">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:padding="@dimen/_4dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorTheme" />
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_4dp"
+            android:padding="@dimen/_6dp"
+            android:text="00:00"
+            android:fontFamily="@font/countdown"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16sp"
+            android:visibility="visible" />
+
+        &lt;!&ndash; Todo Ready to go top control&ndash;&gt;
+        <LinearLayout
+            android:id="@+id/llReadyToGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtReadyToGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:padding="@dimen/_6dp"
+                android:text="@string/ready_to_go"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWorkoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Workout Name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_8dp"
+            android:tint="@color/colorGray"
+            android:src="@drawable/ic_video_white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgVideo"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_8dp"
+            android:tint="@color/colorGray"
+            android:src="@drawable/ic_info" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgInfo"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_8dp"
+            android:src="@drawable/ic_sound_on" />
+
+    </RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/rltTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvWorkoutStatus"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="15dp"
+            android:padding="@dimen/_4dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorTheme" />
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/bebas"
+            android:padding="@dimen/_6dp"
+            android:text="00:00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_22sp"
+            android:textStyle="normal"
+            android:visibility="visible" />
+
+        <!-- Todo Ready to go top control-->
+        <LinearLayout
+            android:id="@+id/llReadyToGo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtReadyToGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:padding="@dimen/_6dp"
+                android:text="@string/ready_to_go"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWorkoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Workout Name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:src="@drawable/ic_video_white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:src="@drawable/ic_info" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4dp"
+                android:src="@drawable/ic_sound_on" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Todo Bottom controls -->
+    <RelativeLayout
+        android:id="@+id/rltBottomControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <!-- Next, pre and done button-->
+        <RelativeLayout
+            android:id="@+id/rltStepTypeWorkOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_0_5dp"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_4dp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgbtnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_pre" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgbtnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_done"
+                android:tint="@color/colorTheme"
+                android:gravity="center" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgbtnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_next" />
+
+        </RelativeLayout>
+
+        <!-- Timer workout controls -->
+        <RelativeLayout
+            android:id="@+id/rltTimeTypeWorkOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ProgressBar
+                android:id="@+id/pbExTimeStatus"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70dp"
+                android:progressDrawable="@drawable/pb_horizontal_pro_theme" />
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:id="@+id/rcyBottomWorkoutTimeStatus"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_centerVertical="true"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />-->
+
+            <TextView
+                android:id="@+id/txtTimeCountDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/bebas"
+                android:text="@string/demo_time"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_28sp" />
+
+            <ImageButton
+                android:id="@+id/imgbtnPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_32dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_puase" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Todo Ready to go bottom controls -->
+    <RelativeLayout
+        android:id="@+id/rltBottomReadyToGo"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_32dp">
+
+        <RelativeLayout
+            android:id="@+id/rltCountDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/txtCountDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:fontFamily="@font/bebas"
+                android:textSize="@dimen/_28sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/demo_count"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/progressBar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:max="30"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_bar"
+                android:secondaryProgress="30"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltCountDown"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:textStyle="bold"
+            android:textSize="@dimen/_18sp"
+            android:textColor="@color/colorTheme"
+            android:text="@string/btn_skip"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

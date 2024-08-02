@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/two_different_font</item>
+    </style>
+
+
+    <style name="AppThemeSplash" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <item name="colorAccent">@color/colorWhite</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+
+        <item name="android:statusBarColor">#424242</item>
+        <item name="android:navigationBarColor">#424242</item>
+
+    </style>
+
+
+    <style name="AppTheme_Workoutlist" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colortheme</item>
+        <item name="colorPrimaryDark">@color/colortheme</item>
+        <item name="colorAccent">@color/colortheme</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+
+
+<!--    <style name="AppTheme_Splash" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+
+<!--&lt;!&ndash;        <item name="android:windowBackground">@drawable/splash_logo</item>&ndash;&gt;-->
+
+<!--        <item name="android:windowFullscreen">true</item>-->
+<!--        <item name="android:navigationBarColor">@color/transparent</item>-->
+<!--        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>-->
+<!--        <item name="android:enforceNavigationBarContrast" tools:ignore="NewApi">false</item>-->
+<!--    </style>-->
+
+
+    <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/colorWhite</item>
+    </style>
+
+
+</resources>

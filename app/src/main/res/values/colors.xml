@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#94aafd</color>
+    <color name="colorPrimaryDark">#94aafd</color>
+    <color name="colorAccent">#94aafd</color>
+    <color name="notification_theme">#80DEEA</color>
+
+
+
+    <color name="blue_theme">#2FDF07</color>
+    <color name="blue_theme_light">#8190CA</color>
+    <color name="colorWhiteTran">#8BFFFFFF</color>
+
+    <color name="green_theme">#94aafd</color>
+    <color name="orange_theme">#FA692D</color>
+    <color name="colortheme">#94aafd</color>
+    <color name="colorTheme">#94aafd</color>
+<!--    <color name="light_blue_theme">#4183FD</color>-->
+
+
+
+</resources>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CompletedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Complete congratulation image and exercise contents -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_theme">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:padding="@dimen/_8dp"
+                android:src="@drawable/ic_back"
+                tools:ignore="ContentDescription"
+                app:tint="@color/colorWhite" />
+
+            <!-- Congratulation view -->
+            <RelativeLayout
+                android:id="@+id/rltImgLevel"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/imgCompleteLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_completed"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <!-- Day completed -->
+            <TextView
+                android:id="@+id/txtLevelNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltImgLevel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_32dp"
+                android:text="@string/complete_lvl_done_msg"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold" />
+
+            <!-- Total Exercise view -->
+            <LinearLayout
+                android:id="@+id/llExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLevelNo"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/_16dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_workouts"
+                    android:tint="@color/colorWhite"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    style="@style/tv_total_values"
+                    android:id="@+id/txtTotalNoOfLevel"
+                    android:layout_marginStart="@dimen/_0dp"
+                    android:textSize="@dimen/_22sp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/demo_count"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/tv_total_values_bottom_title"
+                    android:id="@+id/txtExercise"
+                    android:text="@string/lbl_exercise"
+                    android:textColor="@color/colorWhite"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+
+            <!-- Burned calories view -->
+            <LinearLayout
+                android:id="@+id/llBurnCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLevelNo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_16dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_kcal"
+                    android:tint="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    style="@style/tv_total_values"
+                    android:id="@+id/txtBurnCaloriesValues"
+                    android:layout_marginStart="@dimen/_0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="20.58"
+                    android:gravity="center"
+                    android:textSize="@dimen/_22sp"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/tv_total_values_bottom_title"
+                    android:id="@+id/txtBurnCaloriesTitle"
+                    android:text="@string/lbl_kcal"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+
+            <!-- Durations view -->
+            <LinearLayout
+                android:id="@+id/llDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtLevelNo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_minutes"
+                    android:tint="@color/colorWhite"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    style="@style/tv_total_values"
+                    android:id="@+id/txtDurationTime"
+                    android:layout_marginStart="@dimen/_0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/demo_time_clock"
+                    android:textSize="@dimen/_22sp"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    style="@style/tv_total_values_bottom_title"
+                    android:id="@+id/txtDuration"
+                    android:text="@string/lbl_duration"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+
+            <!-- Bottom Reminder, next, Share view -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llDuration"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_32dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_8dp">
+
+                <Button
+                    android:id="@+id/btnDoItAgain"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/btn_do_it_again"
+                    android:textAlignment="textStart"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sp" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/btnShare"
+                    android:textAlignment="textEnd"
+                    android:layout_marginEnd="@dimen/_40dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/btn_next"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <Button
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:text="@string/btn_share"
+                    android:textAlignment="textEnd"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- current Weekday status -->
+        <LinearLayout
+            android:id="@+id/llWeekStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@color/colorWhite"
+            android:elevation="@dimen/elevation_view"
+            android:orientation="vertical"
+            android:padding="@dimen/_8dp"
+            android:visibility="gone">
+
+            <!-- Day Status Title -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8dp">
+
+                <TextView
+                    android:id="@+id/tvWeekName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/demo_week_day"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/tvGoalStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:text="@string/demo_week_goal_day"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/_16sp" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcyWeekStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+        <!-- Weight and bmi graph view -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@color/colorWhite"
+            android:elevation="@dimen/elevation_view"
+            android:orientation="vertical"
+            android:padding="@dimen/_8dp">
+
+            <!-- Weight view -->
+            <TextView
+                android:id="@+id/txtWeightTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:text="@string/lbl_weight"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:layout_toStartOf="@+id/txtKG"
+                    android:hint="@string/lbl_kg"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/txtKG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:layout_toStartOf="@+id/txtLB"
+                    android:background="@drawable/green_back"
+                    android:padding="@dimen/_8dp"
+                    android:text="@string/lbl_kg"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtLB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:background="@drawable/ract_gray"
+                    android:padding="@dimen/_8dp"
+                    android:text="@string/lbl_lb"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- Bmi title and hide button -->
+            <TextView
+                android:id="@+id/txtBmiTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:text="@string/bmi_title"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtHideShowBmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="@dimen/_12dp"
+                android:text="@string/btn_hide"
+                android:textSize="@dimen/_16sp"
+                android:textAllCaps="true"
+                android:textColor="@color/green_theme"
+                android:textStyle="bold" />
+
+            <!-- Graph view-->
+            <LinearLayout
+                android:id="@+id/lnyBmiGraphMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!-- Bmi Color view -->
+                    <LinearLayout
+                        android:id="@+id/lnyBmiGraph"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="0.5"
+                            android:background="@color/colorFirst" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="1.5"
+                            android:background="@color/colorSecond" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="2"
+                            android:background="@color/colorThird" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorFour" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorFive" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorSix" />
+
+                    </LinearLayout>
+
+                    <!-- Bmi Blank view and display bmi percentage -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <View
+                            android:id="@+id/blankView1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1">
+
+                            <TextView
+                                android:id="@+id/txtBmiGrade"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0"
+                                android:textSize="@dimen/_12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/BmiPosition"
+                                android:layout_width="5dp"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/txtBmiGrade"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/colorBlack" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/blankView3"
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.0"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!-- Bmi bottom text -->
+                <LinearLayout
+                    android:id="@+id/lnyBmiNumberGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="0.4"
+                        android:text="15"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="1.3"
+                        android:text="16"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="2.1"
+                        android:text="18.5"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="1.1"
+                        android:text="25"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="1"
+                        android:text="30"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="0.80"
+                        android:text="35"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_weight="0.35"
+                        android:text="40"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_12sp" />
+
+                </LinearLayout>
+
+                <!-- Bmi Calculation text -->
+                <TextView
+                    android:id="@+id/txtWeightString"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/demo_text"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sp" />
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/btn_edit"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/_16sp"
+                    android:textColor="@color/green_theme" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- AdView Code -->
+        <LinearLayout
+            android:id="@+id/lny_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8dp"
+                android:visibility="gone"
+                ads:adSize="MEDIUM_RECTANGLE"
+                 />
+
+        </LinearLayout>
+
+
+
+        <!-- I feel view-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@color/colorWhite"
+            android:elevation="@dimen/elevation_view"
+            android:orientation="vertical"
+            android:padding="@dimen/_8dp">
+
+            <TextView
+                android:id="@+id/txtFeelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_i_feel"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/_4dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtEasyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_easy"
+                    android:textSize="@dimen/_16sp" />
+
+                <TextView
+                    android:id="@+id/txtExhaustedTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/lbl_exhausted"
+                    android:textSize="@dimen/_16sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/rdgFeel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdoFeelOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoFeelTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoFeelThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoFeelFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8dp" />
+
+                <RadioButton
+                    android:id="@+id/rdoFeelFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8dp" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnFeedBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_8dp"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/_4dp"
+                android:text="@string/btn_feedback"
+                android:textStyle="bold"
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/adMobView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:visibility="visible"/>
+
+        <!-- Save Button-->
+        <Button
+            android:id="@+id/btnSaveBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_8dp"
+            android:background="@color/colorTheme"
+            android:text="@string/btn_next"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

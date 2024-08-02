@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <!--<clip>-->
+            <!--<scale android:scaleWidth="100%">-->
+                <shape android:shape="rectangle">
+
+                    <solid android:color="@color/colorWhite" />
+
+                    <!--
+                    <gradient
+                        android:angle="0"
+                        android:centerColor="@color/colorGray"
+                        android:centerY="0"
+                        android:endColor="@color/colorGray"
+                        android:startColor="@color/colorGray" />
+                        -->
+                    <corners
+                        android:bottomLeftRadius="@dimen/_10dp"
+                        android:bottomRightRadius="@dimen/_10dp"
+                        android:topLeftRadius="@dimen/_10dp"
+                        android:topRightRadius="@dimen/_10dp" />
+
+                </shape>
+            <!--</scale>-->
+        <!--</clip>-->
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <scale android:scaleWidth="100%">
+                <shape>
+                    <!--<solid android:color="@color/colorTheme" />-->
+                    <gradient
+                        android:angle="0"
+                        android:centerColor="@color/colorTheme"
+                        android:centerY="0"
+                        android:endColor="@color/colorTheme"
+                        android:startColor="@color/colorTheme" />
+
+                    <!--<corners
+                        android:bottomLeftRadius="0dp"
+                        android:bottomRightRadius="0dp"
+                        android:topLeftRadius="0dp"
+                        android:topRightRadius="0dp" />-->
+
+                     <corners
+                         android:bottomLeftRadius="@dimen/_10dp"
+                         android:bottomRightRadius="@dimen/_10dp"
+                         android:topLeftRadius="@dimen/_10dp"
+                         android:topRightRadius="@dimen/_10dp" />
+                </shape>
+            </scale>
+        </clip>
+    </item>
+</layer-list>

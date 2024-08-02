@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".activity.NextPrevDetailsWorkoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/lny_ad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:id="@+id/llAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llAdViewFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rltCountDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="@dimen/_2dp">
+
+                <TextView
+                    android:id="@+id/txtCountDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/bebas"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="@dimen/_26sp"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:max="30"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_bar"
+                    android:secondaryProgress="30" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_skip"
+                android:textColor="@color/colorTheme"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvRestTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_rest_sec"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_24sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvNextExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:text="@string/lbl_next_exercise"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlBottomControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTheme"
+            android:padding="@dimen/_8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSteps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next 1 / 12"
+                    android:textColor="@color/colorGrayLight"
+                    android:textSize="@dimen/_20sp"
+                    android:fontFamily="@font/oswald_bold"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtWorkoutName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Workout name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtWorkoutTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="14"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ViewFlipper
+                android:id="@+id/viewfliperWorkout"
+                android:layout_width="80dp"
+                android:layout_centerVertical="true"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

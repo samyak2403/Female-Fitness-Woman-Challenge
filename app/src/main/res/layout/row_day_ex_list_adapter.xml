@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_2dp"
+    android:layout_marginBottom="@dimen/_2dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardElevation="@dimen/elevation_view"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_6dp"
+            android:layout_toStartOf="@+id/vfEx"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvExName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_16sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvExCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:text="x10"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ViewFlipper
+            android:id="@+id/vfEx"
+            android:layout_width="@dimen/_90dp"
+            android:layout_height="@dimen/_90dp"
+            android:layout_toStartOf="@+id/llReplace" />
+
+        <LinearLayout
+            android:id="@+id/llReplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/ivReplace"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:src="@drawable/ic_replace"
+                android:tint="@color/colorTheme"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/imgWorkoutDemo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingStart="@dimen/_8dp"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingEnd="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lny_ad"
+        android:layout_below="@+id/imgWorkoutDemo"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_24dp"
+        android:paddingStart="@dimen/_8dp"
+        android:paddingEnd="@dimen/_8dp">
+
+        <LinearLayout
+            android:id="@+id/lny_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtWorkoutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginStart="@dimen/_8dp"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/demo_text"
+                android:textSize="@dimen/_18sp"
+                android:textColor="@color/green_theme"
+                android:textStyle="bold"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:id="@+id/txtWorkoutDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:text="@string/demo_text"
+                android:textSize="@dimen/_16sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/lny_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            ads:adSize="LARGE_BANNER"
+             />
+
+    </LinearLayout>
+
+</RelativeLayout>

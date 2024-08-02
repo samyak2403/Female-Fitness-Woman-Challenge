@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorGrayLight">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Todo Remove Ad-->
+                <RelativeLayout
+                    android:id="@+id/rlRemoveAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtRemoveAdTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remove_ads"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtRemoveAdTitle"
+                        android:text="@string/upgrade_remove_ads"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:id="@+id/btnPurchase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ract_theme_select"
+                        android:padding="@dimen/_8dp"
+                        android:text="INR 180"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_18sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/vWorkoutTopSpace"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/_12dp" />
+
+                <!-- Todo Workout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_16dp">
+
+                    <TextView
+                        style="@style/setting_sub_Title"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/workout" />
+
+                    <!-- Rest Set-->
+                    <RelativeLayout
+                        android:id="@+id/rlRestSet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imgRest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_rest_set"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgRest"
+                            android:text="@string/rest_set" />
+
+                        <TextView
+                            android:id="@+id/tvRestTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawableEnd="@drawable/ic_setting_sec_arrow"
+                            android:drawablePadding="@dimen/_2dp"
+                            android:drawableTint="@color/colorTheme"
+                            android:text="30 secs"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/_16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray"
+                        android:visibility="visible" />
+
+                    <!-- Countdown Time -->
+                    <RelativeLayout
+                        android:id="@+id/rlCountDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imgCountdown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_countdown_time"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgCountdown"
+                            android:text="@string/countdown_time" />
+
+                        <TextView
+                            android:id="@+id/tvCountDown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:drawableEnd="@drawable/ic_setting_sec_arrow"
+                            android:drawablePadding="@dimen/_2dp"
+                            android:drawableTint="@color/colorTheme"
+                            android:text="15 secs"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/_16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray"
+                        android:visibility="visible" />
+
+                    <!-- Sound Option -->
+                    <RelativeLayout
+                        android:id="@+id/rlSoundOption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgSound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_sound_options"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgSound"
+                            android:text="@string/sound_options" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Todo Voice Option -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_16dp">
+
+                    <TextView
+                        style="@style/setting_sub_Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_16dp"
+                        android:textStyle="bold"
+                        android:text="@string/voice_options_tts" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Test Voice-->
+                    <RelativeLayout
+                        android:id="@+id/rlTestVoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgTestVoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_test_voice"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgTestVoice"
+                            android:text="@string/test_voice" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Select TTS Engine-->
+                    <RelativeLayout
+                        android:id="@+id/rlSelectTTSEngine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgSelectTTSEngine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_tts_engine"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            android:id="@+id/tvSettingTv"
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="false"
+                            android:layout_toEndOf="@+id/imgSelectTTSEngine"
+                            android:text="@string/select_tts_engine" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSettingTv"
+                            android:layout_centerVertical="false"
+                            android:layout_toEndOf="@+id/imgSelectTTSEngine"
+                            android:text="@string/google_text_to_speech_engine"
+                            android:textSize="@dimen/_12sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Download TTS Engine -->
+                    <RelativeLayout
+                        android:id="@+id/rlDownloadTTSEngine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgDownloadTTSEngine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_download_tts_engine"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgDownloadTTSEngine"
+                            android:text="@string/download_tts_engine" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Voice Language -->
+                    <RelativeLayout
+                        android:id="@+id/rlVoiceLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgVoiceLanguage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/home_white"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgVoiceLanguage"
+                            android:text="@string/voice_language" />
+
+                    </RelativeLayout>
+
+                    <!-- Download more TTS Language data -->
+                    <RelativeLayout
+                        android:id="@+id/rlDownloadMoreTTSLanguageData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgDownloadMoreTTSLanguageData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/home_white"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgDownloadMoreTTSLanguageData"
+                            android:text="@string/download_more_tts_language_data" />
+
+                    </RelativeLayout>
+
+                    <!-- Device TTS Setting -->
+                    <RelativeLayout
+                        android:id="@+id/rlDeviceTTSSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgDeviceTTSSetting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_device_tts_setting"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgDeviceTTSSetting"
+                            android:text="@string/device_tts_setting" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Todo General Settings -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_16dp">
+
+                    <TextView
+                        style="@style/setting_sub_Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/_16dp"
+                        android:text="@string/general_settings" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Health Data -->
+                    <RelativeLayout
+                        android:id="@+id/rlHealthData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgHealthData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_health_data"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgHealthData"
+                            android:text="@string/my_profile" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Remind Me to workout every day -->
+                    <RelativeLayout
+                        android:id="@+id/rlReminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_reminder"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgReminder"
+                            android:text="@string/remind_me_to_workout_every_day" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Metric & Imperial Units -->
+                    <RelativeLayout
+                        android:id="@+id/rlMetricImperialUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imgMetricImperialUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_metric"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgMetricImperialUnit"
+                            android:text="@string/metric_imperial_units" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray"
+                        android:visibility="gone" />
+
+                    <!-- Keep Screen On -->
+                    <RelativeLayout
+                        android:id="@+id/rlKeepScreenOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:padding="@dimen/_8dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imgKeepScreenOn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_keep__screen"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgKeepScreenOn"
+                            android:text="@string/keep_the_screen_on" />
+
+                        <Switch
+                            android:id="@+id/swtKeepScreenOn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:checked="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Todo Community -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_16dp">
+
+                    <TextView
+                        style="@style/setting_sub_Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_16dp"
+                        android:textStyle="bold"
+                        android:text="@string/community" />
+
+                    <!-- Share with Friends -->
+                    <RelativeLayout
+                        android:id="@+id/rlShareWithFriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgShareWithFriend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_share"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgShareWithFriend"
+                            android:text="@string/share_with_friends" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Todo Support Us -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_16dp">
+
+                    <TextView
+                        style="@style/setting_sub_Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/_16dp"
+                        android:text="@string/support_us" />
+
+                    <!-- Rate Us -->
+                    <RelativeLayout
+                        android:id="@+id/rlRateUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgRateUs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_rate_us"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgRateUs"
+                            android:text="@string/rate_us" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Feed Back -->
+                    <RelativeLayout
+                        android:id="@+id/rlFeedBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgFeedBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_feedback"
+                            app:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgFeedBack"
+                            android:text="@string/feed_back" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Privacy Policy -->
+                    <RelativeLayout
+                        android:id="@+id/rlPrivacyPolicy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgPrivacyPolicy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_privacy_policy"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgPrivacyPolicy"
+                            android:text="@string/privacy_policy" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:background="@color/colorGray" />
+
+                    <!-- Restart Progress -->
+                    <RelativeLayout
+                        android:id="@+id/rlRestartProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:padding="@dimen/_8dp">
+
+                        <ImageView
+                            android:id="@+id/imgRestartProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_setting_restart_progress"
+                            android:tint="@color/colorTheme" />
+
+                        <TextView
+                            style="@style/setting_tv_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/imgRestartProgress"
+                            android:text="@string/restart_progress" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/adMobView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:visibility="visible"/>
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

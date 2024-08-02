@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ReportFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Todo Report Full Workout -->
+            <include layout="@layout/layout_total_workout_details" />
+
+            <!-- Draw Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_0_5dp"
+                android:background="@color/colorGray" />
+
+            <!-- History -->
+            <LinearLayout
+                android:id="@+id/llHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_8dp"
+                android:paddingTop="@dimen/_8dp"
+                android:paddingEnd="@dimen/_8dp"
+                android:paddingBottom="@dimen/_8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4dp">
+
+                    <TextView
+                        android:id="@+id/txtHistoryTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4dp"
+
+                        android:text="@string/history"
+                        android:textSize="@dimen/_16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtHistoryMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_4dp"
+                        android:text="@string/lbl_more"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTheme"
+                        android:textSize="@dimen/_14sp" />
+
+                </RelativeLayout>
+
+                <!-- History 7 Day -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcyHistoryWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:id="@+id/txtRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:padding="@dimen/_8dp"
+                    android:text="@string/lbl_records"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="@dimen/_14sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <!-- AdView Code -->
+            <LinearLayout
+                android:id="@+id/lny_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    ads:adSize="MEDIUM_RECTANGLE"
+                    android:visibility="gone"
+                     />
+
+            </LinearLayout>
+
+
+
+
+
+            <!-- Todo weight view -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:background="@color/colorWhite"
+                android:elevation="@dimen/_2dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_8dp">
+
+                <!-- Todo Weight title and add Button-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/_4dp"
+                        android:layout_toStartOf="@+id/ivAddGraph"
+                        android:text="@string/lbl_weight"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivAddGraph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/_8dp"
+                        android:src="@drawable/ic_add"
+                        android:visibility="visible"
+                        app:tint="@color/colorTheme" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtSelWeightUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:text="@string/lbl_kg"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sp"
+                    android:textStyle="bold" />
+
+                <com.github.mikephil.charting.charts.CombinedChart
+                    android:id="@+id/chartWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/graph_height" />
+
+                <!-- Todo Bottom weight view -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginEnd="@dimen/_4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_current"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/txtCurrentKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/demo_kg"
+                        android:textSize="@dimen/_16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginEnd="@dimen/_4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_heaviest"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/txtHeaviestKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/demo_kg"
+                        android:textSize="@dimen/_16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginEnd="@dimen/_4dp"
+                    android:layout_marginBottom="@dimen/_8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_lightest"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/txtLightestKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/demo_kg"
+                        android:textSize="@dimen/_16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Todo Bmi Graph  and Height view -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+<!--
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:paddingStart="@dimen/_12dp"
+                    android:paddingTop="@dimen/_4dp"
+                    android:paddingEnd="@dimen/_12dp"
+                    android:paddingBottom="@dimen/_4dp">
+
+                    <TextView
+                        android:id="@+id/txtBmiTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/bmi_title"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_18sp" />
+
+                    <TextView
+                        android:id="@+id/txtBmiTitleValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/txtBmiTitle"
+                        android:text="@string/demo_float_clount"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/btnEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="@dimen/_8dp"
+                        android:paddingBottom="@dimen/_8dp"
+                        android:text="@string/btn_edit"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTheme"
+                        android:textSize="@dimen/_18sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtHideShowBmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:padding="@dimen/_12dp"
+                    android:text="@string/btn_hide"
+                    android:textColor="@color/colorTheme"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                &lt;!&ndash; Todo Graph view &ndash;&gt;
+                <LinearLayout
+                    android:id="@+id/lnyBmiGraphMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_12dp"
+                    android:paddingTop="@dimen/_4dp"
+                    android:paddingEnd="@dimen/_12dp"
+                    android:paddingBottom="@dimen/_4dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        &lt;!&ndash; Graph color &ndash;&gt;
+                        <LinearLayout
+                            android:id="@+id/lnyBmiGraph"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal"
+                            android:weightSum="7">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_4dp"
+                                android:layout_weight="0.5"
+                                android:background="@color/colorFirst" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_4dp"
+                                android:layout_weight="1.5"
+                                android:background="@color/colorSecond" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_4dp"
+                                android:layout_weight="2"
+                                android:background="@color/colorThird" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_4dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorFour" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/_4dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorFive" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/colorSix" />
+
+                        </LinearLayout>
+
+                        &lt;!&ndash; Graph Grade display and blank view  &ndash;&gt;
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:weightSum="7">
+
+                            <View
+                                android:id="@+id/blankView1"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1">
+
+                                <TextView
+                                    android:id="@+id/txtBmiGrade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/demo_float_clount"
+                                    android:textSize="@dimen/_12sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:id="@+id/BmiPosition"
+                                    android:layout_width="5dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/txtBmiGrade"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorBlack" />
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/blankView3"
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.0"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    &lt;!&ndash; Graph Bottom text display &ndash;&gt;
+                    <LinearLayout
+                        android:id="@+id/lnyBmiNumberGraph"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="0.4"
+                            android:text="15"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="1.5"
+                            android:text="16"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="2.1"
+                            android:text="18.5"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="1.1"
+                            android:text="25"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="1"
+                            android:text="30"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="0.70"
+                            android:text="35"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_weight="0.35"
+                            android:text="40"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_12sp" />
+
+                    </LinearLayout>
+
+                    &lt;!&ndash; Graph result text &ndash;&gt;
+                    <TextView
+                        android:id="@+id/txtWeightString"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:text="@string/demo_text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_16sp" />
+
+                </LinearLayout>
+-->
+                <!-- Bmi graph view -->
+
+                <!-- Graph bottom Draw Line -->
+                <include layout="@layout/layout_bmi_graph" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_0_5dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:background="@color/colorGray" />
+
+                <!-- Todo Height View -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_12dp"
+                    android:paddingEnd="@dimen/_12dp"
+                    android:paddingBottom="@dimen/_4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/lbl_height"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_20sp" />
+
+                        <TextView
+                            android:id="@+id/btnEditHeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:paddingTop="@dimen/_8dp"
+                            android:paddingBottom="@dimen/_8dp"
+                            android:text="@string/btn_edit"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorTheme"
+                            android:textSize="@dimen/_18sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:layout_marginBottom="@dimen/_16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@+id/tvHeight"
+                            android:text="@string/lbl_current"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorTheme" />
+
+                        <TextView
+                            android:id="@+id/tvHeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/demo_ft_in"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorGray" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/adMobView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:layout_marginBottom="@dimen/_5dp"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</FrameLayout>

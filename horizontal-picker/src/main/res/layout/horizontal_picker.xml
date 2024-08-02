@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/baseView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/today"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="right"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgPrevMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_keyboard_arrow_left"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/tvMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:text="April 2020"
+                android:textSize="14sp"
+                android:textColor="@color/primaryTextColor"/>
+
+            <ImageView
+                android:id="@+id/imgNextMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_keyboard_arrow_right"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.jhonnyx2012.horizontalpicker.HorizontalPickerRecyclerView
+        android:id="@+id/rvDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="match_parent"/>
+            <FrameLayout
+                android:id="@+id/vHover"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_day_hover"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="@dimen/_8dp">
+
+    <TextView
+        android:id="@+id/txtWeightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:text="@string/lbl_weight"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_8dp">
+
+        <EditText
+            android:id="@+id/edWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toStartOf="@+id/txtKG"
+            android:hint="@string/lbl_kg"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/txtKG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toStartOf="@+id/txtLB"
+            android:background="@drawable/ract_theme_select"
+            android:padding="@dimen/_8dp"
+            android:text="@string/lbl_kg"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txtLB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@drawable/ract_gray"
+            android:padding="@dimen/_8dp"
+            android:text="@string/lbl_lb" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:text="@string/lbl_height"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_8dp">
+
+        <EditText
+            android:id="@+id/edCM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toStartOf="@+id/txtCM"
+            android:hint="@string/demo_float_clount"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lnyInch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toStartOf="@+id/txtCM"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/edFeet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:layout_weight="1"
+                android:hint="@string/lbl_feet"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/edInch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:layout_weight="1"
+                android:hint="@string/lbl_inch"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toStartOf="@+id/txtIN"
+            android:background="@drawable/ract_gray"
+            android:padding="@dimen/_8dp"
+            android:text="@string/lbl_cm"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/txtIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@drawable/ract_theme_select"
+            android:padding="@dimen/_8dp"
+            android:text="@string/lbl_in"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_8dp">
+
+        <Button
+            android:id="@+id/btnOkay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toStartOf="@+id/btnNext"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_cancel"
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/_16sp" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_next"
+            android:textColor="@color/colorTheme"
+            android:textSize="@dimen/_16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_8dp">
+
+    <TextView
+        android:id="@+id/tvDlDurationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="Set duration (10 ~ 15 secs)"
+        android:textSize="@dimen/_20sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_16dp">
+
+        <ImageButton
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_16dp"
+            android:src="@drawable/ic_setting_navigat_pre" />
+
+        <TextView
+            android:id="@+id/tvDurations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_toEndOf="@+id/btnPrev"
+            android:text="15"
+            android:textSize="@dimen/_36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSecTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDurations"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_16dp"
+            android:text="Secs"
+            android:textSize="@dimen/_14sp" />
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tvDurations"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_16dp"
+            android:src="@drawable/ic_setting_navigat_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tvSet"
+            android:padding="@dimen/_16dp"
+            android:text="@string/btn_cancel"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tvSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:padding="@dimen/_16dp"
+            android:text="@string/btn_set"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTheme" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_24dp" >
+
+    <TextView
+            android:id="@+id/txt_dl_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_title"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_8dp" />
+
+    <RadioGroup
+            android:id="@+id/rgDlWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp" >
+
+        <RadioButton
+                android:id="@+id/rbDlWeight1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_lb"
+                android:gravity="center"
+                android:paddingStart="@dimen/_24dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_18sp"
+                android:layout_marginTop="@dimen/_8dp" />
+
+        <RadioButton
+                android:id="@+id/rbDlWeight2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_kg"
+                android:gravity="center"
+                android:paddingStart="@dimen/_24dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_18sp"
+                android:layout_marginTop="@dimen/_16dp" />
+
+    </RadioGroup >
+
+</LinearLayout >

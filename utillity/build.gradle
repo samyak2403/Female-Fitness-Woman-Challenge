@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 4
+        versionName "1.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        
+        release {
+            minifyEnabled true
+            /*resValue("string", "ad_main_id", "ca-app-pub-2282773501359063~2350722208")
+            resValue("string", "REWARD_VIDEO", "--------------------------")
+            resValue("string", "BANNER", "ca-app-pub-2282773501359063/7164081090")
+            resValue("string", "INTERSTITIAL", "ca-app-pub-2282773501359063/1444850556")*/
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            /*resValue("string", "ad_main_id", "ca-app-pub-1478950224950529~2119609456")
+            resValue("string", "REWARD_VIDEO", "ca-app-pub-3940256099942544/5224354917")
+            resValue("string", "BANNER", "ca-app-pub-3940256099942544/6300978111")
+            resValue("string", "INTERSTITIAL", "ca-app-pub-3940256099942544/1033173712")*/
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    implementation 'com.shawnlin:number-picker:2.4.8'
+
+    implementation 'com.google.android.gms:play-services-ads:20.3.0'
+    implementation "com.airbnb.android:lottie:3.3.1"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.2.1'
+}

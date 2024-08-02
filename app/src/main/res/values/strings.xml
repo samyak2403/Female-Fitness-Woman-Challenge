@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Lose Weight For Women</string>
+
+
+    <!-- Bottom tab names -->
+    <string name="my_training_plan">My Training</string>
+    <string name="routines">Routines</string>
+    <string name="report">Report</string>
+    <string name="mine">Mine</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="lbl_reminder">Reminder</string>
+
+
+
+
+    <string name="maxInter" translatable="false">6615a9cb9fffe62e</string>
+
+
+    <string name="sdkKey" translatable="false">QvIoL8NlxVL5e3WmTXuyptoPNy9_Gq6rXoHwCuDr7PLd0aQWG8p2bZOm0HwWVB3fB3X8NnxiOTdTAyOvkyKOwA</string>
+
+<!--    <string name="app_open_ad_id">ca-app-pub-3940256099942544/3419835294</string>-->
+    <string name="app_open_ad_id"></string>
+
+</resources>

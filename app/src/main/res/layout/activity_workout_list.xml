@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".activity.WorkoutListActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/annonce.main.coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Todo Header view -->
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/flexible.example.appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/flexible.example.collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/day_status_header_img_h"
+                    app:contentScrim="@color/colorTheme"
+                    app:expandedTitleGravity="center"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:statusBarScrim="@android:color/transparent"
+                    app:title="@string/app_name"
+                    app:titleEnabled="false">
+
+                    <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+
+                    <ImageView
+                        android:id="@+id/ivCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_cat_full_body" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70dp"
+                        android:layout_marginTop="@dimen/_25dp"
+                        app:contentInsetStart="@dimen/_0dp"
+                        app:layout_collapseMode="pin">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/ibvBack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/transparent"
+                                android:padding="@dimen/_8dp"
+                                android:src="@drawable/ic_back" />
+
+                            <TextView
+                                android:id="@+id/txtTitle"
+                                style="@style/tv_action_bar_title"
+                                android:layout_toEndOf="@+id/ibvBack"
+                                android:text="@string/app_name"
+                                android:textAllCaps="true" />
+
+                            <ImageButton
+                                android:id="@+id/ibvMore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/transparent"
+                                android:padding="@dimen/_8dp"
+                                android:src="@drawable/ic_more"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <LinearLayout
+                        android:id="@+id/llOption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_12dp"
+                        android:weightSum="3"
+                        app:layout_collapseMode="parallax">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llTotalWorkouts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_workouts"
+                                    android:tint="@color/colorWhite" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvExCount"
+                                    style="@style/tv_total_values"
+                                    android:text="110"
+                                    android:textColor="@color/colorWhite" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvExCountTitle"
+                                style="@style/tv_total_values_bottom_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/tv_workout_title"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llKcal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_kcal"
+                                    android:tint="@color/colorWhite" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvKcal"
+                                    style="@style/tv_total_values"
+                                    android:text="110"
+                                    android:textColor="@color/colorWhite" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvKcalTitle"
+                                style="@style/tv_total_values_bottom_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lbl_kcal"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llMinutes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_minutes"
+                                    android:tint="@color/colorWhite" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMinutes"
+                                    style="@style/tv_total_values"
+                                    android:text="110"
+                                    android:textColor="@color/colorWhite" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvMinutesTitle"
+                                style="@style/tv_total_values_bottom_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lbl_minutes"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/ivExLevel"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20dp"
+                                android:adjustViewBounds="true"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:src="@drawable/ic_beginner_level" />
+
+                            <TextView
+                                android:id="@+id/tvExLevelTitle"
+                                style="@style/tv_total_values_bottom_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/tv_level_title"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_native"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <!-- Todo Content -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvExerciseList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorGrayLight"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_4dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/row_day_ex_list_adapter" />
+
+                    <include
+                        layout="@layout/row_day_ex_list_adapter"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_24dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_theme"
+                android:text="@string/btn_start"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_theme"
+                android:text="@string/btn_save"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

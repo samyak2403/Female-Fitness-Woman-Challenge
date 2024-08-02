@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DaysStatusActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/annonce.main.coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Todo Header view -->
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/flexible.example.appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/flexible.example.collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/day_status_header_img_h"
+                    app:contentScrim="@color/colorTheme"
+                    app:expandedTitleGravity="center"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:title="@string/app_name"
+                    app:titleEnabled="false">
+
+                    <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+
+                    <ImageView
+                        android:id="@+id/ivCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_cat_full_body" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70dp"
+                        android:layout_marginTop="@dimen/_25dp"
+                        app:contentInsetStart="@dimen/_0dp"
+                        app:layout_collapseMode="pin">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/imgBack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/transparent"
+                                android:padding="@dimen/_8dp"
+                                android:src="@drawable/ic_back" />
+
+                            <TextView
+                                android:id="@+id/txtTitle"
+                                style="@style/tv_action_bar_title"
+                                android:layout_toEndOf="@+id/imgBack"
+                                android:text="@string/_7x4_challenge"
+                                android:textAllCaps="true" />
+
+                            <ImageView
+                                android:id="@+id/imgMore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/_8dp"
+                                android:src="@drawable/ic_more"
+                                android:tint="@color/colorWhite"
+                                android:visibility="invisible" />
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:visibility="visible"
+                        app:layout_collapseMode="parallax">
+
+                        <RelativeLayout
+                            android:id="@+id/llOption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_16dp"
+                            android:layout_marginEnd="@dimen/_16dp"
+                            android:layout_marginBottom="@dimen/_8dp">
+
+                            <!-- Day process in text-->
+                            <RelativeLayout
+                                android:id="@+id/rltDayStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txtDayLeft"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="28 Days Left"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/_14sp" />
+
+                                <TextView
+                                    android:id="@+id/txtDayPer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="0%"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/_14sp" />
+
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pbDay"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_8dp"
+                                android:layout_below="@+id/rltDayStatus"
+                                android:layout_marginTop="@dimen/_5dp"
+                                android:layout_marginBottom="@dimen/_5dp"
+                                android:max="100"
+                                android:progressDrawable="@drawable/pb_gray_theme" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/fl_native"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcyDaysName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8dp"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginEnd="@dimen/_8dp"
+                        android:layout_marginBottom="@dimen/_8dp"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <include
+                        layout="@layout/row_day_status"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llAdViewFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</LinearLayout>

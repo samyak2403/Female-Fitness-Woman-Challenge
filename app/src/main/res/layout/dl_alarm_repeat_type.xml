@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llRepeat"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10dp">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkMon"
+        android:layout_width="match_parent"
+        android:checked="true"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        android:padding="@dimen/_4dp"
+        android:text="@string/hint_monday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkTue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        android:checked="true"
+        android:padding="@dimen/_4dp"
+        android:text="@string/hint_tuesday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkWed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        android:checked="true"
+        android:padding="@dimen/_4dp"
+        android:text="@string/hint_wednesday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkThu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        android:checked="true"
+        android:padding="@dimen/_4dp"
+        android:text="@string/hint_thursday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkFri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        android:checked="true"
+        android:padding="@dimen/_4dp"
+        android:text="@string/hint_friday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkSat"
+        android:checked="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        android:padding="@dimen/_4dp"
+        android:text="@string/hint_saturday" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chkSun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_margin="@dimen/_4dp"
+        android:padding="@dimen/_4dp"
+        android:text="@string/hint_sunday" />
+
+</LinearLayout>

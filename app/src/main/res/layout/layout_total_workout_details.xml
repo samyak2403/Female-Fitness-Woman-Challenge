@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llReport"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="@dimen/_8dp"
+    android:weightSum="3"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llWorkouts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llTotalWorkouts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_workouts"
+                android:tint="@color/green_theme" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/tv_total_values"
+                android:id="@+id/txtTotalWorkouts"
+                android:textColor="@color/green_theme"
+                android:text="110" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/tv_total_values_bottom_title"
+            android:id="@+id/txtTotalWorkoutsTitle"
+            android:textColor="@color/green_theme"
+            android:text="@string/workouts" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llKcal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llTotalKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_kcal"
+                android:tint="@color/blue_theme" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/tv_total_values"
+                android:id="@+id/txtTotalKcal"
+                android:text="111"
+                android:textColor="@color/blue_theme"
+                />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/tv_total_values_bottom_title"
+            android:id="@+id/txtTotalKcalTitle"
+            android:textColor="@color/blue_theme"
+            android:text="@string/lbl_kcal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMinutes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llTotalMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_minutes"
+                android:tint="@color/orange_theme" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/tv_total_values"
+                android:id="@+id/txtTotalMinutes"
+                android:textColor="@color/orange_theme"
+                android:text="11" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/tv_total_values_bottom_title"
+            android:id="@+id/txtTotalMinutesTitle"
+            android:textColor="@color/orange_theme"
+            android:text="@string/lbl_minutes" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

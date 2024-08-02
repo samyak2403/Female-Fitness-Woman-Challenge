@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLight"
+    android:orientation="vertical"
+    tools:context=".activity.WorkoutListInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imgbtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorTheme" />
+
+        <ImageView
+            android:id="@+id/imgbtnVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_video_white" />
+
+        <!--<android.support.v4.view.ViewPager-->
+        <com.utillity.custom.NonSwipeAbleViewPager
+            android:id="@+id/viewPagerWorkoutDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rltBottomControl"
+            android:layout_below="@+id/imgbtnVideo"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_marginBottom="@dimen/_2dp" />
+
+        <LinearLayout
+            android:id="@+id/rltBottomControlRemoved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnMinus"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:background="@drawable/round_theme"
+                    android:src="@drawable/ic_completed_line_red"
+                    android:tint="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvExTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/demo_count"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_24sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnPlus"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:background="@drawable/round_theme"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llSave"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorTheme"
+                    android:text="@string/btn_reset"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorTheme"
+                    android:text="@string/btn_save"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llReplace"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnReplace"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorTheme"
+                    android:text="@string/btn_replace"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Removed Bottom control -->
+        <RelativeLayout
+            android:id="@+id/rltBottomControl"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorTheme"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imgbtnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_pre"
+                android:tint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/imgbtnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/bebas"
+                android:gravity="center"
+                android:text="@string/step_demo_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_26sp" />
+
+            <ImageView
+                android:id="@+id/imgbtnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_next"
+                android:tint="@color/colorWhite" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_8dp"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/llAdViewFacebook"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" />
+</LinearLayout>
+
