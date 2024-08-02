@@ -190,7 +190,7 @@ We welcome contributions to the WomenHomeWorkout app! Whether you want to report
 If you encounter a bug or have a question, please follow these steps:
 
 1. **Search for Existing Issues**
-   - Before creating a new issue, check the [existing issues](https://github.com/your-username/WomenHomeWorkout/issues) to see if your problem has already been reported.
+   - Before creating a new issue, check the [existing issues](https://github.com/samyak2403/WomenHomeWorkout/issues) to see if your problem has already been reported.
 
 2. **Create a New Issue**
    - If your issue is not listed, open a new issue with a clear and descriptive title. Include:
@@ -203,7 +203,7 @@ If you encounter a bug or have a question, please follow these steps:
 If you have an idea for a new feature or improvement:
 
 1. **Search Existing Feature Requests**
-   - Check the [existing issues](https://github.com/your-username/WomenHomeWorkout/issues) to see if your feature has already been suggested.
+   - Check the [existing issues](https://github.com/samyak2403/WomenHomeWorkout/issues) to see if your feature has already been suggested.
 
 2. **Submit a Feature Request**
    - Open a new issue and provide a detailed description of your suggestion. Include:
@@ -228,7 +228,5 @@ By contributing to this project, you agree that your contributions will be licen
 Thank you for contributing to WomenHomeWorkout! Your help makes the project better for everyone.
 
 
-## License
 
-- This project is licensed under the [MIT License](LICENSE).
 
