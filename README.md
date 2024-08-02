@@ -98,18 +98,11 @@ The WomenHomeWorkout app is designed to offer a variety of fitness routines tail
 ## Screenshots
 
 Here are some screenshots showcasing the main features of the WomenHomeWorkout app:
-![Screenshot_20240802_122434_Lose Weight For Women](https://github.com/user-attachments/assets/c57d92b7-95c7-4ed8-8ce6-20b988826d42)
-![Screenshot_20240802_132836_Lose Weight For Women](https://github.com/user-attachments/assets/4a1d302a-6b1a-4b0f-9655-bd4a808c7aca)
-![Screenshot_20240802_132823_Lose Weight For Women](https://github.com/user-attachments/assets/000839f5-88cd-4967-a053-a896c876c44a)
-![Screenshot_20240802_132801_Lose Weight For Women](https://github.com/user-attachments/assets/757286ad-4d99-4d86-b6cd-ff44eff230b2)
-![Screenshot_20240802_122459_Lose Weight For Women](https://github.com/user-attachments/assets/f825ead3-de21-44b7-ab49-e698d752b101)
-![Screenshot_20240802_122453_Lose Weight For Women](https://github.com/user-attachments/assets/0f848767-0202-43fe-87df-c16ad881de42)
-
 
 
 ### Home Screen
 
-![Home Screen](screenshots/home_screen.png)
+![Home Screen]<img src="https://github.com/user-attachments/assets/a2732590-1f05-43ca-9acd-e436c44f974b" alt="Screenshot 2" width="300"/>
 *The Home Screen provides an overview of available workout routines and user progress.*
 
 ### Workout Routine
