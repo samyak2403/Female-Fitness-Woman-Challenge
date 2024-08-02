@@ -101,11 +101,12 @@ Here are some screenshots showcasing the main features of the WomenHomeWorkout a
 
 
 ### Home Screen
-
-![Home Screen]<img src="https://github.com/user-attachments/assets/a2732590-1f05-43ca-9acd-e436c44f974b" alt="Screenshot 2" width="300"/>
+<img src="https://github.com/user-attachments/assets/a2732590-1f05-43ca-9acd-e436c44f974b" alt="Screenshot 2" width="300"/>
 *The Home Screen provides an overview of available workout routines and user progress.*
 
 ### Workout Routine
+
+![Screenshot_20240802_132801_Lose Weight For Women](<img src="https://github.com/user-attachments/assets/ea4cce25-b4d5-4e96-a4c4-5bd5a71c20ea alt="Screenshot 2" width="300"/>)
 
 ![Workout Routine](screenshots/workout_routine.png)
 *Detailed view of a selected workout routine.*
