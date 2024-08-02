@@ -1,4 +1,3 @@
-
 # Code of Conduct
 
 ## Our Pledge
@@ -43,7 +42,7 @@ This Code of Conduct applies to:
 
 To report any incidents of unacceptable behavior:
 
-1. **Contact the project team**: Reach out via email at [your-email@example.com]. Provide as much detail as possible.
+1. **Contact the project team**: Reach out via email at [conduct@womenhomeworkout.com](mailto:conduct@womenhomeworkout.com). Provide as much detail as possible.
 2. **Confidentiality**: Reports will be handled with confidentiality to protect the privacy of all involved parties.
 3. **Response**: The project team will review and investigate all reports and take appropriate action, which may include warnings, temporary bans, or permanent removal from the community.
 
