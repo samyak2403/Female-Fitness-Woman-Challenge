@@ -106,17 +106,17 @@ Here are some screenshots showcasing the main features of the WomenHomeWorkout a
 
 ### Workout Routine
 <img src="https://github.com/user-attachments/assets/ea4cce25-b4d5-4e96-a4c4-5bd5a71c20ea" alt="Screenshot 2" width="300"/>
-
+<img src="https://github.com/user-attachments/assets/84652e4f-7a3a-43fa-bee0-4acd65a06f54" alt="Screenshot 2" width="300"/>
 *Detailed view of a selected workout routine.*
 
 ### Progress Tracking
 <img src="https://github.com/user-attachments/assets/ddfd05e6-4ea1-4f3b-aa84-31f35f459048" alt="Screenshot 2" width="300"/>
-![Progress Tracking](screenshots/progress_tracking.png)
+
 *Tracks user progress and workout history.*
 
 ### Settings
 <img src="https://github.com/user-attachments/assets/2b6be899-ef76-4913-a41d-79d727d39f47" alt="Screenshot 2" width="300"/>
-![Settings](screenshots/settings.png)
+
 *User settings and preferences.*
 
 ## Building the Project
