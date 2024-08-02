@@ -144,6 +144,93 @@ Here are some screenshots showcasing the main features of the WomenHomeWorkout a
 
 - Contributions are welcome. Please fork the repository and submit a pull request with your changes.
 
+- ## Contributing
+
+We welcome contributions to the WomenHomeWorkout app! Whether you want to report a bug, suggest a feature, or contribute code, here’s how you can get involved.
+
+### How to Contribute
+
+1. **Fork the Repository**
+   - Click the "Fork" button at the top right of this repository page to create your own copy of the repository.
+
+2. **Clone Your Fork**
+   - Clone your forked repository to your local machine using:
+     ```bash
+     git clone https://github.com/your-username/WomenHomeWorkout.git
+     ```
+
+3. **Create a New Branch**
+   - Create a new branch for your feature or fix:
+     ```bash
+     git checkout -b my-feature-branch
+     ```
+
+4. **Make Changes**
+   - Make your changes to the codebase. Ensure that you follow the coding style and conventions used in the project.
+
+5. **Write Tests**
+   - If applicable, add or update tests to cover your changes.
+
+6. **Commit Your Changes**
+   - Commit your changes with a clear and descriptive commit message:
+     ```bash
+     git add .
+     git commit -m "Add a descriptive message about your changes"
+     ```
+
+7. **Push Your Changes**
+   - Push your changes to your forked repository:
+     ```bash
+     git push origin my-feature-branch
+     ```
+
+8. **Create a Pull Request**
+   - Go to the original repository and click on "New Pull Request."
+   - Select your branch and submit the pull request. Provide a clear description of your changes and the purpose of the pull request.
+
+### Reporting Issues
+
+If you encounter a bug or have a question, please follow these steps:
+
+1. **Search for Existing Issues**
+   - Before creating a new issue, check the [existing issues](https://github.com/your-username/WomenHomeWorkout/issues) to see if your problem has already been reported.
+
+2. **Create a New Issue**
+   - If your issue is not listed, open a new issue with a clear and descriptive title. Include:
+     - A detailed description of the problem or feature request.
+     - Steps to reproduce the issue (if applicable).
+     - Any relevant screenshots or error messages.
+
+### Suggesting Features
+
+If you have an idea for a new feature or improvement:
+
+1. **Search Existing Feature Requests**
+   - Check the [existing issues](https://github.com/your-username/WomenHomeWorkout/issues) to see if your feature has already been suggested.
+
+2. **Submit a Feature Request**
+   - Open a new issue and provide a detailed description of your suggestion. Include:
+     - The problem or need your feature addresses.
+     - How the feature would benefit users.
+     - Any additional context or examples.
+
+### Code of Conduct
+
+Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) when participating in the community and contributing to the project.
+
+### Style Guide
+
+- Follow the existing code style used in the project.
+- Ensure your code is well-documented and includes comments where necessary.
+- Use clear and descriptive commit messages.
+
+### License
+
+By contributing to this project, you agree that your contributions will be licensed under the [MIT License](LICENSE).
+
+Thank you for contributing to WomenHomeWorkout! Your help makes the project better for everyone.
+
+
 ## License
 
 - This project is licensed under the [MIT License](LICENSE).
