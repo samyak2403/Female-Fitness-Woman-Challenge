@@ -140,9 +140,6 @@ Here are some screenshots showcasing the main features of the WomenHomeWorkout a
 - If you encounter issues, ensure all dependencies are correctly added and up-to-date.
 - Refer to the official documentation of each library for specific integration guidelines and troubleshooting.
 
-## Contributing
-
-- Contributions are welcome. Please fork the repository and submit a pull request with your changes.
 
 - ## Contributing
 
@@ -156,7 +153,7 @@ We welcome contributions to the WomenHomeWorkout app! Whether you want to report
 2. **Clone Your Fork**
    - Clone your forked repository to your local machine using:
      ```bash
-     git clone https://github.com/your-username/WomenHomeWorkout.git
+     git clone https://github.com/samyak2403/Female-Fitness-Woman-Challenge.git
      ```
 
 3. **Create a New Branch**
