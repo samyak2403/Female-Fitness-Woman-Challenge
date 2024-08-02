@@ -105,19 +105,17 @@ Here are some screenshots showcasing the main features of the WomenHomeWorkout a
 *The Home Screen provides an overview of available workout routines and user progress.*
 
 ### Workout Routine
+<img src="https://github.com/user-attachments/assets/ea4cce25-b4d5-4e96-a4c4-5bd5a71c20ea" alt="Screenshot 2" width="300"/>
 
-![Screenshot_20240802_132801_Lose Weight For Women](<img src="https://github.com/user-attachments/assets/ea4cce25-b4d5-4e96-a4c4-5bd5a71c20ea alt="Screenshot 2" width="300"/>)
-
-![Workout Routine](screenshots/workout_routine.png)
 *Detailed view of a selected workout routine.*
 
 ### Progress Tracking
-
+<img src="https://github.com/user-attachments/assets/ddfd05e6-4ea1-4f3b-aa84-31f35f459048" alt="Screenshot 2" width="300"/>
 ![Progress Tracking](screenshots/progress_tracking.png)
 *Tracks user progress and workout history.*
 
 ### Settings
-
+<img src="https://github.com/user-attachments/assets/2b6be899-ef76-4913-a41d-79d727d39f47" alt="Screenshot 2" width="300"/>
 ![Settings](screenshots/settings.png)
 *User settings and preferences.*
 
